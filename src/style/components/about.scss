@@ -14,6 +14,7 @@
 		width: 100%;
 		border-right: 4px solid #cd2028;
 		padding-top: 11.8rem;
+		margin-right: 60px;
 		padding-bottom: 11.8rem;
 
 		strong {
@@ -85,5 +86,38 @@
 		background-color: #0d0d0d;
 		border-radius: 50%;
 		margin-bottom: 2.8rem;
+	}
+}
+
+.about--inner {
+	padding-bottom: 8rem;
+
+	.container {
+		display: block;
+	}
+
+	h2 {
+		margin-bottom: 10rem;
+	}
+
+	.about__list {
+		max-width: 144rem;
+		margin: 0 auto;
+	}
+
+	.about__list-img {
+		width: 11.2rem;
+		height: 11.2rem;
+	}
+
+	.about__list-item h4 {
+		text-transform: uppercase;
+		color: #cd2028;
+		padding-bottom: 3.5rem;
+	}
+
+	.about__list-item p {
+		text-align: justify;
+		line-height: 1.67;
 	}
 }

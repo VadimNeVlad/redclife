@@ -24,6 +24,21 @@ body {
   margin: 0 auto;
 }
 
+.container-small {
+  max-width: 145.8rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.burger-content {
+    display: none;
+}
+
+.mobile-menu-close {
+    display: none;
+}
+
 h1 {
   font-size: 4.4rem;
   font-weight: 600;
@@ -31,6 +46,10 @@ h1 {
   letter-spacing: 2.2px;
   color: #0d0d0d;
   text-transform: uppercase;
+}
+
+h1.white {
+  color: #fff;
 }
 
 h2 {
@@ -42,6 +61,7 @@ h2 {
   text-align: center;
   color: #333333;
   padding-bottom: 3rem;
+  text-transform: uppercase;
 
   &::before {
     content: "";
