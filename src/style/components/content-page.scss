@@ -1,0 +1,54 @@
+.content-page {
+
+	h4 {
+		font-size: 2.1rem;
+		font-weight: 600;
+		font-stretch: normal;
+		line-height: 1.43;
+		letter-spacing: 0.42px;
+		color: #0d0d0d;
+		padding-bottom: 4rem;
+	}
+
+	p {
+		font-size: 1.7rem;
+		font-weight: 300;
+		line-height: 1.65;
+		letter-spacing: 0.34px;
+		color: #0d0d0d;
+		padding-bottom: 3rem;
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	ul {
+		padding-left: 4rem;
+
+		li {
+			position: relative;
+			padding-left: 2.7rem;
+			font-size: 1.8rem;
+			font-weight: 300;
+			line-height: 1.56;
+			letter-spacing: 0.36px;
+			color: #0d0d0d;
+			padding-bottom: 1.4rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 1rem;
+				left: 0;
+				width: .8rem;
+				height: .8rem;
+				background-color: #cd2028;
+			}
+
+			strong {
+				font-weight: 600;
+			}
+		}
+	}
+}
