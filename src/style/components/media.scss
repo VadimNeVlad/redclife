@@ -4,7 +4,7 @@
   }
 
   .container {
-    max-width: 142rem;
+    max-width: 145rem;
   }
 
   .about__title-content {
@@ -54,6 +54,64 @@
 
   .team-intro {
     background-position: 50% 0;
+  }
+
+  .practices .items-list:first-of-type .items-list__item {
+    font-size: 2rem;
+  }
+
+  .items-list__item {
+    padding: 0 2.5rem;
+  }
+
+  .items-list__list {
+    margin-left: -3.9rem;
+    margin-right: -3.9rem;
+  }
+
+  .items-list__item-wrap {
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+
+  .practice-content__review-item {
+    max-width: 75rem;
+  }
+
+  .brochure {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+  }
+
+  .practice-content__sidebars {
+    max-width: 39rem;
+  }
+
+  .practice-content__info {
+    margin-right: 60px;
+  }
+
+  .team-content__sidebars {
+    max-width: 51rem;
+  }
+
+  .careers__item {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .careers__list {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+  }
+
+  .careers__item-wrap {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .careers__item h4 {
+    font-size: 2.2rem;
   }
 }
 
@@ -109,6 +167,27 @@
 
   .team-intro {
     background-position: 70% 0;
+  }
+
+  .items-list__item {
+    font-size: 1.8rem;
+    letter-spacing: 2.6px;
+  }
+
+  .team-content__tabs-nav {
+    padding-left: 0;
+  }
+
+  .team-content__tabs-item {
+    margin-right: 6rem;
+  }
+
+  .about--careers .about__title-content {
+    max-width: 42.5rem;
+  }
+
+  .news-content {
+    padding-top: 9rem;
   }
 }
 
@@ -267,6 +346,31 @@
     align-items: flex-start;
   }
 
+  .about .container-small {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about--practices .about__title-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-bottom: 40px;
+  }
+
+  .about--careers .about__title-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-bottom: 40px;
+  }
+
+  .about {
+    padding-bottom: 9rem;
+  }
+
+  .about--careers .about__title-content h2 {
+    max-width: none;
+  }
+
   .about__title-content {
     max-width: none;
     border: none;
@@ -344,6 +448,64 @@
   .team-content__tabs-nav {
     padding-top: 2rem;
     margin-bottom: 4.6rem;
+  }
+
+  .items-list__item-wrap {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .items-list__list {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .practice-content__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .practice-content__info {
+    margin-right: 0;
+  }
+
+  .practice-content {
+    padding-top: 9rem;
+  }
+
+  .practice-content__sidebars {
+    max-width: 100%;
+  }
+
+  .about__info::before {
+    display: none;
+  }
+
+  .careers__list {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .careers__item-wrap {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .news-content__news-list {
+    padding-bottom: 0;
+  }
+
+  .pagination {
+    padding-bottom: 50px;
+  }
+
+  .news-content__recent-item {
+    justify-content: flex-start;
   }
 }
 
@@ -502,6 +664,96 @@
     }
   }
 
+  .about--practices .about__title-content {
+    max-width: none;
+  }
+
+  .about--practices .about__title-content h2 {
+    max-width: none;
+  }
+
+  .about--careers .about__title-content {
+    max-width: none;
+  }
+
+  .about--careers .about__title-content h2 {
+    max-width: none;
+  }
+
+  .practices {
+    padding-top: 7.5rem;
+  }
+
+  .items-list__item-wrap {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .items-list__list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .items-list__item {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .practices .items-list:first-of-type .items-list__item {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .practices .items-list {
+    padding-bottom: 3rem;
+  }
+
+  .team-content__tabs-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-content__tabs-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .practice-content {
+    padding-top: 7rem;
+  }
+
+  .practice-content__review-item::before {
+    right: 1rem;
+    font-size: 16rem;
+    top: -7rem;
+  }
+
+  .practice-content__review-item {
+    margin-bottom: 5.5rem;
+  }
+
+  .careers__item-wrap {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .careers__list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .careers h2 {
+    margin-bottom: 3rem;
+  }
+
+  .careers__item h4 {
+    padding-bottom: 6rem;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -595,9 +847,9 @@
     height: 27rem;
   }
 
-  .team-content__tabs-item {
-    margin-right: 5rem;
-  }
+  // .team-content__tabs-item {
+  //   margin-right: 5rem;
+  // }
 
   .team-content__sidebar {
     padding-right: 15px;
@@ -614,6 +866,64 @@
 
   .team-content__sidebar p {
     padding-bottom: 2rem;
+  }
+
+  .items-list__item-wrap {
+    padding-bottom: 3rem;
+  }
+
+  .practices h2 {
+    margin-bottom: 3.8rem;
+  }
+
+  .content-page h2 {
+    margin-bottom: 3rem;
+  }
+
+  .content-page ul {
+    padding-left: 0;
+  }
+
+  .content-page h2 {
+    padding-left: 2rem;
+  }
+
+  .careers__item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .careers__item h4 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .about ul {
+    padding-left: 0;
+  }
+
+  .news-content {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .news-content__recent {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .news-content__info-wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .news-content__item-img {
+    height: 30rem;
+  }
+
+  .news-content--single h2 {
+    padding-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -638,5 +948,13 @@
   .team-intro {
     padding-bottom: 3.5rem;
     background-position: 72% 20px;
+  }
+
+  .careers__item h4 {
+    font-size: 1.8rem;
+  }
+
+  .news-content__item-img {
+    height: 25rem;
   }
 }

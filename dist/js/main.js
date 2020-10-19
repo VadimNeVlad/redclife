@@ -45,6 +45,11 @@ $(function () {
       ['team', 'Team'],
       ['single-team', 'Team Single'],
       ['practices', 'Practices'],
+      ['single-practices', 'Single Practices'],
+      ['careers', 'Careers'],
+      ['single-careers', 'Single Careers'],
+      ['news', 'News'],
+      ['single-news', 'Single News'],
   ]);
   
 });

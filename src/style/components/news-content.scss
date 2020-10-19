@@ -1,0 +1,141 @@
+.news-content {
+	padding-top: 12rem;
+	padding-bottom: 9.6rem;
+
+	&__news-item {
+		display: block;
+		width: 100%;
+		box-shadow: 6px 6px 15px 0 rgba(0, 0, 0, 0.13);
+		margin-bottom: 5rem;
+
+		&:hover {
+			.careers__item-read-more::after {
+				transform: translate(0, 0);
+			}
+		}
+	}
+
+	&__item-img {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 40rem;
+	}
+
+	&__info-wrap {
+		padding-left: 4rem;
+		padding-right: 4rem;
+		padding-bottom: 3.8rem;
+		padding-top: 3.8rem;
+	}
+
+	&__date {
+		display: inline-block;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		font-weight: 500;
+		line-height: 2.17;
+		letter-spacing: 1.2px;
+		color: #ffffff;
+		text-align: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		background-color: #cd2028;
+		margin-bottom: 10px;
+	}
+
+	h3 {
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 1.21;
+		letter-spacing: 3.6px;
+		color: #333333;
+		text-transform: uppercase;
+		padding-bottom: 2rem;
+	}
+
+	&__description {
+
+		span {
+			color: #cd2028;
+		}
+	}
+
+	&__news-list {
+		padding-bottom: 4.4rem;
+	}
+
+	&__recent {
+		padding: 0;
+		background-color: #fff;
+		padding-top: 5.5rem;
+
+		h4 {
+			padding-bottom: 4.7rem;
+		}
+	}
+
+	&__recent-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 3.2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__recent-img {
+		min-width: 6rem;
+		max-width: 6rem;
+		height: 6rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-right: 2.7rem;
+	}
+
+	&__recent-info {
+		margin-top: -.4rem;
+		p {
+			font-size: 1.7rem;
+			font-weight: 600;
+			line-height: 1.65;
+			letter-spacing: 0.34px;
+			color: #0d0d0d;
+		}
+	}
+
+	&__recent-date {
+		font-size: 1.7rem;
+		line-height: 1.65;
+		letter-spacing: 0.34px;
+		color: #cd2028;
+	}
+}
+
+.news-content--single {
+	padding-bottom: 1.2rem;
+
+	h2 {
+		padding-left: 0;
+		border-left: none;
+		margin-bottom: 0;
+	}
+
+	p strong {
+		font-weight: 500;
+	}
+
+	.news-content__item-img {
+		margin-bottom: 3.8rem;
+	}
+
+	.news-content__date {
+		margin-bottom: 0;
+	}
+}
