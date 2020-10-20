@@ -152,3 +152,21 @@
 		}
 	}
 }
+
+.header-404 {
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url("../img/404-bg.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+}

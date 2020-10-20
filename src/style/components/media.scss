@@ -189,6 +189,18 @@
   .news-content {
     padding-top: 9rem;
   }
+
+  .contact-us__form-content {
+    margin-right: 0;
+  }
+
+  .contact-us .container-small {
+    justify-content: space-between;
+  }
+
+  .contact-us .container-small::before {
+    left: 56%;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -507,6 +519,61 @@
   .news-content__recent-item {
     justify-content: flex-start;
   }
+
+  .page-zero h4 {
+    font-size: 16rem;
+    padding-bottom: 0;
+  }
+
+  .contact-us .container-small {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-us .container-small::before {
+    display: none;
+  }
+
+  .contact-us {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .contact-us__form {
+    margin-bottom: 40px;
+  }
+
+  .search-result {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .intro--search {
+    padding-top: 28.7rem;
+    padding-bottom: 13.5rem;
+  }
+
+  .sitemap__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sitemap {
+    padding-top: 23rem;
+    padding-bottom: 7rem;
+  }
+
+  .sitemap__item a {
+    font-size: 2rem;
+  }
+
+  .sitemap__item > ul li {
+    padding-bottom: 5px;
+  }
+
+  .sitemap h2 {
+    margin-bottom: 3.5rem;
+  }
 }
 
 @media (max-width: 748px) {
@@ -754,6 +821,44 @@
     padding-bottom: 6rem;
   }
 
+  .page-zero h4 {
+    font-size: 8rem;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+  }
+
+  .page-zero strong {
+    font-size: 2.5rem;
+    line-height: 1.17;
+    padding-bottom: 10px;
+  }
+
+  .page-zero {
+    padding-top: 25rem;
+    padding-bottom: 13rem;
+  }
+
+  .contact-us__field-row {
+    flex-direction: column;
+
+  }
+
+  .contact-us__field-row .contact-us__field {
+    max-width: none;
+  }
+
+  .map-block {
+    height: 40rem;
+  }
+
+  .search-result h2 span {
+    display: block;
+  }
+
+  .search-result__item h4 {
+    font-size: 2.2rem;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -925,6 +1030,19 @@
     padding-left: 0;
     margin-bottom: 0;
   }
+
+  .search-result h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .search-result {
+    padding-bottom: 1rem;
+  }
+
+  .sitemap {
+    padding-top: 22rem;
+  }
 }
 
 @media (max-width: 370px) {
@@ -956,5 +1074,18 @@
 
   .news-content__item-img {
     height: 25rem;
+  }
+
+  .page-zero h4 {
+    font-size: 7rem;
+  }
+
+  .page-zero {
+    padding-top: 23rem;
+    padding-bottom: 10rem;
+  }
+
+  .intro {
+    padding-bottom: 8.5rem;
   }
 }

@@ -50,6 +50,10 @@ $(function () {
       ['single-careers', 'Single Careers'],
       ['news', 'News'],
       ['single-news', 'Single News'],
+      ['404', '404 Page'],
+      ['contact-us', 'Contact Us'],
+      ['search', 'Search'],
+      ['sitemap', 'Sitemap'],
   ]);
   
 });

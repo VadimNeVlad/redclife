@@ -1,0 +1,53 @@
+.sitemap {
+	padding-top: 26.5rem;
+	padding-bottom: 11.5rem;
+
+	h2 {
+		margin-bottom: 6.5rem;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__list {
+		max-width: 86rem;
+		width: 100%;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 2.5rem;
+		padding-bottom: 1.5rem;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			left: 0;
+			width: .8rem;
+			height: .8rem;
+			background-color: #cd2028;
+		}
+
+		a {
+			display: inline-block;
+			font-size: 1.8rem;
+			font-weight: 300;
+			line-height: 1.56;
+			letter-spacing: 0.36px;
+			color: #0d0d0d;
+			transition: all .3s;
+
+			&:hover {
+				color: #cd2028;
+			}
+		}
+	}
+
+	&__item > ul {
+		padding-top: 5px;
+	}
+}
