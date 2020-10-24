@@ -1,0 +1,1091 @@
+@media (max-width: 1600px) {
+  html {
+    font-size: 9px;
+  }
+
+  .container {
+    max-width: 145rem;
+  }
+
+  .about__title-content {
+    max-width: 30rem;
+  }
+
+  .about__list-item {
+    max-width: 28rem;
+  }
+
+  .about--inner .about__list-item {
+    max-width: 34.1rem;
+  }
+
+  .reputation__item {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .reputation__item::before {
+    font-size: 16rem;
+  }
+
+  .team__item-img {
+    min-width: 20rem;
+    max-width: 20rem;
+    height: 25rem;
+    margin-right: 2.5rem;
+  }
+
+  .team__item-content {
+    margin-right: 10px;
+  }
+
+  .team__item-position {
+    font-size: 1.4rem;
+    padding-bottom: 1.9rem;
+  }
+
+  .team__item-name {
+    font-size: 1.7rem;
+  }
+
+  .team__item-link {
+    margin-top: 1.7rem;
+  }
+
+  .team-intro {
+    background-position: 50% 0;
+  }
+
+  .practices .items-list:first-of-type .items-list__item {
+    font-size: 2rem;
+  }
+
+  .items-list__item {
+    padding: 0 2.5rem;
+  }
+
+  .items-list__list {
+    margin-left: -3.9rem;
+    margin-right: -3.9rem;
+  }
+
+  .items-list__item-wrap {
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
+  }
+
+  .practice-content__review-item {
+    max-width: 75rem;
+  }
+
+  .brochure {
+    padding-top: 14rem;
+    padding-bottom: 14rem;
+  }
+
+  .practice-content__sidebars {
+    max-width: 39rem;
+  }
+
+  .practice-content__info {
+    margin-right: 60px;
+  }
+
+  .team-content__sidebars {
+    max-width: 51rem;
+  }
+
+  .careers__item {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .careers__list {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+  }
+
+  .careers__item-wrap {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .careers__item h4 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1360px) {
+    html {
+    font-size: 8px;
+  }
+
+  .team-content__sidebar h4::before {
+    width: 3px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .deals__item {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    padding-top: 9rem;
+  }
+
+  .news__item {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+
+  .footer {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .about__list-item {
+    max-width: 25rem;
+  }
+
+  .reputation__item {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .team__item-wrap {
+    width: 50%;
+  }
+
+  .team__item-img {
+    max-width: 23rem;
+    min-width: 23rem;
+    height: 28rem;
+  }
+
+  .team {
+    padding-bottom: 2rem;
+  }
+
+  .team-intro {
+    background-position: 70% 0;
+  }
+
+  .items-list__item {
+    font-size: 1.8rem;
+    letter-spacing: 2.6px;
+  }
+
+  .team-content__tabs-nav {
+    padding-left: 0;
+  }
+
+  .team-content__tabs-item {
+    margin-right: 6rem;
+  }
+
+  .about--careers .about__title-content {
+    max-width: 42.5rem;
+  }
+
+  .news-content {
+    padding-top: 9rem;
+  }
+
+  .contact-us__form-content {
+    margin-right: 0;
+  }
+
+  .contact-us .container-small {
+    justify-content: space-between;
+  }
+
+  .contact-us .container-small::before {
+    left: 56%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    z-index: 2;
+  }
+
+  .header__menu {
+    position: fixed;
+    display: flex;
+    max-width: none;
+    flex-direction: column;
+    padding-top: 100px;
+    box-sizing: border-box;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    transform: translate(0%, 0%);
+    background-color: #f2f2f2;
+    padding-bottom: 30px;
+    -ms-align-items: center;
+    align-items: center; 
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: flex-start;
+  }
+
+  .header__menu.active {
+    transform: translate(-100%, 0%);
+    transition: transform 0.4s ease; 
+   }
+
+
+  .burger-content {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 24px;
+  }
+
+  .burger-mob {
+    position: relative;
+    display: block;
+    background: #0d0d0d;
+    width: 30px;
+    height: 2px;
+    border-radius: 5px;
+    top: 12px; 
+  }
+
+  .burger-mob::before {
+    content: "";
+    position: absolute;
+    background: #0d0d0d;
+    width: 30px;
+    height: 2px;
+    top: 8px;
+    display: block;
+    border-radius: 5px; 
+  }
+
+  .burger-mob::after {
+    content: "";
+    position: absolute;
+    background: #0d0d0d;
+    width: 30px;
+    height: 2px;
+    bottom: 8px;
+    display: block;
+    border-radius: 5px; 
+  }
+
+  .mobile-menu-close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    width: 30px;
+    height: 24px; 
+  }
+
+  .mobile-menu-close .cross {
+    position: absolute;
+    top: 0;
+    height: 4px;
+    margin-top: -2px;
+    left: 0;
+    width: 100%;
+    z-index: 1; 
+  }
+
+  .mobile-menu-close .cross:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #0d0d0d;
+    width: 28px;
+    height: 2px;
+    top: 12px;
+    transform: rotate(-45deg); 
+  }
+
+  .mobile-menu-close .cross:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #0d0d0d;
+    width: 28px;
+    height: 2px;
+    top: 12px;
+    transform: rotate(45deg); 
+  }
+
+  .header__menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__menu-list li {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .header__menu-list a {
+    font-size: 16px;
+  }
+
+  .header__menu-list li:last-child {
+    padding-right: 0;
+  }
+
+  .intro {
+    position: relative;
+    background-position: bottom;
+    z-index: 1;
+  }
+
+  .intro--bg-dark::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(#fff, 0.25);
+  }
+
+  .about .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about .container-small {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about--practices .about__title-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-bottom: 40px;
+  }
+
+  .about--careers .about__title-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-bottom: 40px;
+  }
+
+  .about {
+    padding-bottom: 9rem;
+  }
+
+  .about--careers .about__title-content h2 {
+    max-width: none;
+  }
+
+  .about__title-content {
+    max-width: none;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-bottom: 40px;
+    margin-right: 0;
+  }
+
+  .about__title-content h2 {
+    max-width: none;
+  }
+
+  .deals__item {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .news__item {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .about--inner .about__list-item {
+    max-width: 25rem;
+  }
+
+  .about--inner .about__list-item p {
+    text-align: left;
+  }
+
+  .about--inner .about__list-img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .about--inner h2 {
+    margin-bottom: 6rem;
+  }
+
+  .reputation__item em {
+    padding-bottom: 5.5rem;
+  }
+
+  .team__item-img {
+    min-width: 20rem;
+    max-width: 20rem;
+    height: 25rem;
+  }
+
+  .team__search {
+    padding-bottom: 8.5rem;
+  }
+
+  .team-content {
+    padding-top: 9rem;
+  }
+
+  .team-content__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-content__info {
+    margin-right: 0;
+  }
+
+  .team-content__sidebars {
+    margin-top: 20px;
+    max-width: none;
+  }
+
+  .team-content__tabs-nav {
+    padding-top: 2rem;
+    margin-bottom: 4.6rem;
+  }
+
+  .items-list__item-wrap {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .items-list__list {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .practice-content__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .practice-content__info {
+    margin-right: 0;
+  }
+
+  .practice-content {
+    padding-top: 9rem;
+  }
+
+  .practice-content__sidebars {
+    max-width: 100%;
+  }
+
+  .about__info::before {
+    display: none;
+  }
+
+  .careers__list {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  .careers__item-wrap {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .news-content__news-list {
+    padding-bottom: 0;
+  }
+
+  .pagination {
+    padding-bottom: 50px;
+  }
+
+  .news-content__recent-item {
+    justify-content: flex-start;
+  }
+
+  .page-zero h4 {
+    font-size: 16rem;
+    padding-bottom: 0;
+  }
+
+  .contact-us .container-small {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-us .container-small::before {
+    display: none;
+  }
+
+  .contact-us {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .contact-us__form {
+    margin-bottom: 40px;
+  }
+
+  .search-result {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .intro--search {
+    padding-top: 28.7rem;
+    padding-bottom: 13.5rem;
+  }
+
+  .sitemap__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sitemap {
+    padding-top: 23rem;
+    padding-bottom: 7rem;
+  }
+
+  .sitemap__item a {
+    font-size: 2rem;
+  }
+
+  .sitemap__item > ul li {
+    padding-bottom: 5px;
+  }
+
+  .sitemap h2 {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 748px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  .about {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .about__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__list-item {
+    max-width: 36rem;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .about__title-content {
+    text-align: center;
+  }
+
+  .about__title-content h2 {
+    text-align: center;
+  }
+
+  .about__list-img {
+    margin: 0 auto;
+    margin-bottom: 2.8rem;
+  }
+
+  .deals__list, .news__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deals__item, .news__item {
+    width: 100%;
+  }
+
+  .deals__item p {
+    max-width: none;
+  }
+
+  .news__item p {
+    max-width: none;
+  }
+
+  .news__item h4 {
+    max-width: none;
+  }
+
+  .header__logo {
+    font-size: 2.4rem;
+  }
+
+  .intro {
+    padding-top: 26.8rem;
+    padding-bottom: 13.4rem;
+  }
+
+  .about--inner .about__list-item p {
+    text-align: center;
+  }
+
+  .about--inner .about__list-item {
+    max-width: 36rem;
+  }
+
+  .reputation h2 {
+    margin-bottom: 7rem;
+  }
+
+  .reputation__list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .reputation__item-wrap {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .reputation__item::before {
+    font-size: 10rem;
+    right: 2rem;
+  }
+
+  .reputation__item {
+    padding-top: 6.8rem;
+    padding-bottom: 6.8rem;
+  }
+
+  .reputation__item em {
+    font-size: 2.2rem;
+  }
+
+  .reputation {
+    padding-bottom: 7rem;
+  }
+
+  .brochure h3 {
+    font-size: 3rem;
+  }
+
+  .brochure {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  .team__item-wrap {
+    width: 100%;
+    padding-bottom: 6rem;
+  }
+
+  .team__item-info {
+    display: block;
+  }
+
+  .team__search-field input {
+    font-size: 1.3rem;
+  }
+
+  .team__search-field input {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .team-intro {
+    padding-top: 40rem;
+    padding-bottom: 7.5rem;
+    background-position: 70% 20px;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000000, 0.2);
+      z-index: -1;
+    }
+  }
+
+  .about--practices .about__title-content {
+    max-width: none;
+  }
+
+  .about--practices .about__title-content h2 {
+    max-width: none;
+  }
+
+  .about--careers .about__title-content {
+    max-width: none;
+  }
+
+  .about--careers .about__title-content h2 {
+    max-width: none;
+  }
+
+  .practices {
+    padding-top: 7.5rem;
+  }
+
+  .items-list__item-wrap {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .items-list__list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .items-list__item {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .practices .items-list:first-of-type .items-list__item {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .practices .items-list {
+    padding-bottom: 3rem;
+  }
+
+  .team-content__tabs-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-content__tabs-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .practice-content {
+    padding-top: 7rem;
+  }
+
+  .practice-content__review-item::before {
+    right: 1rem;
+    font-size: 16rem;
+    top: -7rem;
+  }
+
+  .practice-content__review-item {
+    margin-bottom: 5.5rem;
+  }
+
+  .careers__item-wrap {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .careers__list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .careers h2 {
+    margin-bottom: 3rem;
+  }
+
+  .careers__item h4 {
+    padding-bottom: 6rem;
+  }
+
+  .page-zero h4 {
+    font-size: 8rem;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+  }
+
+  .page-zero strong {
+    font-size: 2.5rem;
+    line-height: 1.17;
+    padding-bottom: 10px;
+  }
+
+  .page-zero {
+    padding-top: 25rem;
+    padding-bottom: 13rem;
+  }
+
+  .contact-us__field-row {
+    flex-direction: column;
+
+  }
+
+  .contact-us__field-row .contact-us__field {
+    max-width: none;
+  }
+
+  .map-block {
+    height: 40rem;
+  }
+
+  .search-result h2 span {
+    display: block;
+  }
+
+  .search-result__item h4 {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+    padding-bottom: 15px;
+  }
+
+  .header__top .container {
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    font-size: 2.2rem;
+  }
+
+  .deals h2, .news h2 {
+    margin-bottom: 5rem;
+  }
+
+  .reputation__item {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .reputation__item em br {
+    display: none;
+  }
+
+  .about--inner {
+    padding-bottom: 50px;
+  }
+
+  .reputation__item h4 {
+    font-size: 2.2rem;
+  }
+
+  .reputation h2 {
+    margin-bottom: 6rem;
+  }
+
+  .team__search {
+    flex-direction: column;
+  }
+
+  .team__search-field {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    max-width: 300px;
+  }
+
+  .team .btn-red {
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .intro {
+    padding-top: 24rem;
+    padding-bottom: 10rem;
+  }
+
+  .brochure {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .brochure h3 {
+    font-size: 2.7rem;
+  }
+
+  .team__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team__item-content {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .team__item-img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    max-width: 22rem;
+    min-width: 22rem;
+    height: 27rem;
+  }
+
+  // .team-content__tabs-item {
+  //   margin-right: 5rem;
+  // }
+
+  .team-content__sidebar {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .team-intro h1 {
+    font-size: 3rem;
+  }
+
+  .team-content {
+    padding-top: 7rem;
+  }
+
+  .team-content__sidebar p {
+    padding-bottom: 2rem;
+  }
+
+  .items-list__item-wrap {
+    padding-bottom: 3rem;
+  }
+
+  .practices h2 {
+    margin-bottom: 3.8rem;
+  }
+
+  .content-page h2 {
+    margin-bottom: 3rem;
+  }
+
+  .content-page ul {
+    padding-left: 0;
+  }
+
+  .content-page h2 {
+    padding-left: 2rem;
+  }
+
+  .careers__item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .careers__item h4 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .about ul {
+    padding-left: 0;
+  }
+
+  .news-content {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .news-content__recent {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .news-content__info-wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .news-content__item-img {
+    height: 30rem;
+  }
+
+  .news-content--single h2 {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .search-result h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .search-result {
+    padding-bottom: 1rem;
+  }
+
+  .sitemap {
+    padding-top: 22rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .intro {
+    padding-top: 22.8rem;
+    padding-bottom: 10.4rem;
+  }
+
+  .reputation__item em {
+    font-size: 2rem;
+  }
+
+  .reputation__item h4 {
+    font-size: 2rem;
+  }
+
+  .team-intro h1 {
+    font-size: 2.7rem;
+  }
+
+  .team-intro {
+    padding-bottom: 3.5rem;
+    background-position: 72% 20px;
+  }
+
+  .careers__item h4 {
+    font-size: 1.8rem;
+  }
+
+  .news-content__item-img {
+    height: 25rem;
+  }
+
+  .page-zero h4 {
+    font-size: 7rem;
+  }
+
+  .page-zero {
+    padding-top: 23rem;
+    padding-bottom: 10rem;
+  }
+
+  .intro {
+    padding-bottom: 8.5rem;
+  }
+}

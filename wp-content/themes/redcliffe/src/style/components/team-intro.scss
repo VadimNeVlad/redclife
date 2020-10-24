@@ -1,0 +1,19 @@
+.team-intro {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 50.3rem;
+	padding-bottom: 9.7rem;
+
+	h1 {
+		color: #fff;
+		padding-bottom: 7px;
+	}
+
+	&__position {
+		font-size: 1.8rem;
+		line-height: 1.44;
+		letter-spacing: 1.8px;
+		color: #ffffff;
+	}
+}

@@ -1,0 +1,98 @@
+html {
+	font-size: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.overflowHidden {
+  overflow: hidden;
+} 
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 176.2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.container-small {
+  max-width: 145.8rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.burger-content {
+    display: none;
+}
+
+.mobile-menu-close {
+    display: none;
+}
+
+.map-block {
+  height: 55rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 2.2px;
+  color: #0d0d0d;
+  text-transform: uppercase;
+}
+
+h1.white {
+  color: #fff;
+}
+
+h2 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.27;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #333333;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80px;
+    height: 4px;
+    background-color: #cd2028;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  font-size: 1.3rem;
+  padding-top: 2px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+  border: none;
+  color: #dc3232;
+  font-size: 1.3rem;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border: none;
+  color: #46b450;
+  font-size: 1.3rem;
+}
