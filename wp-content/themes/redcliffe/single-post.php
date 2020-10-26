@@ -20,7 +20,7 @@
 				<div class="practice-content__info">
 					<div class="news-content__news-list">
 						<div class="news-content__item-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
-						<span class="news-content__date"><?php esc_html( the_date('F j, Y') ) ?></span>
+						<span class="news-content__date"><?php esc_html( the_time('F j, Y') ) ?></span>
 
 						<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
@@ -28,6 +28,10 @@
 
 						<?php endwhile; ?>
 						<?php endif; ?> 
+
+						<?php if (get_field('news_single_author')) { ?>
+							<p class="news-content__description"><?php the_field('news_single_author') ?></p>
+						<?php } ?>
 
 						<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
@@ -39,37 +43,59 @@
 					</div>
 				</div>
 				<div class="practice-content__sidebars">
-					<div class="items-list">
-						<a href="#" class="items-list__item">NEWS</a>
-						<a href="#" class="items-list__item">PROJECTS</a>
-						<a href="#" class="items-list__item">PUBLICATIONS</a>
-						<a href="#" class="items-list__item">EVENTS</a>
-					</div>
+
+					    <?php
+					    $posts_cats_args = array(
+					        'taxonomy' => 'category',
+					        'hide_empty' => true
+					    );
+					    $posts_cats = get_terms($posts_cats_args);
+					    ?>
+
+					    <?php if ($posts_cats) { ?>
+					    	<div class="items-list">
+
+		                        <?php foreach ($posts_cats as $posts_cat) { ?>
+		                        	<a href="<?php echo esc_url( get_term_link( $posts_cat ) ) ?>" class="items-list__item"><?php echo $posts_cat->name; ?></a>
+			                    <? } ?>
+
+					    	</div>
+
+					       
+					    <?php } ?>
+
 					<div class="team-content__sidebar  news-content__recent">
-						<h4>RECENT POSTS</h4>
+
+						<?php if (get_field('news_arch_recent')) { ?>
+							<h4><?php the_field('news_arch_recent') ?></h4>
+						<?php } ?>
+
+						<?php $args = array('post_type' => 'post',
+											'posts_per_page' => 6,
+											'order' => 'DESC') ?>
+
+						<?php $page_index = new WP_Query($args) ?>
+
 						<div class="news-content__recent-list">
-							<a href="#" class="news-content__recent-item">
-								<div class="news-content__recent-img" style="background-image: url(img/nr-1.jpg);"></div>
-								<div class="news-content__recent-info">
-									<p>Feed-in tariff mechanism for renewables restructured in Ukraine</p>
-									<span class="news-content__recent-date">22 July 2020</span>
-								</div>
-							</a>
-							<a href="#" class="news-content__recent-item">
-								<div class="news-content__recent-img" style="background-image: url(img/nr-1.jpg);"></div>
-								<div class="news-content__recent-info">
-									<p>New anti-raiding security mechanisms are now available</p>
-									<span class="news-content__recent-date">27 July 2020</span>
-								</div>
-							</a>
-							<a href="#" class="news-content__recent-item">
-								<div class="news-content__recent-img" style="background-image: url(img/nr-1.jpg);"></div>
-								<div class="news-content__recent-info">
-									<p>The Memorandum on the reduction of the feed-in tariff signed by the Government and renewable energy industry associations</p>
-									<span class="news-content__recent-date">22 July 2020</span>
-								</div>
-							</a>
+							
+							<?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+								<a href="<?php echo esc_url( get_permalink() ); ?>" class="news-content__recent-item">
+									<div class="news-content__recent-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+									<div class="news-content__recent-info">
+										<p><?php esc_html( the_title() ) ?></p>
+										<span class="news-content__recent-date"><?php esc_html( the_date('F j Y') ) ?></span>
+									</div>
+								</a>
+								
+								<?php endwhile; ?>
+
+							<?php endif; ?>	
+
 						</div>
+
+						<?php wp_reset_postdata(); ?>
+
 					</div>
 				</div>
 			</div>

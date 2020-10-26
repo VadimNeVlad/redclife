@@ -1,13 +1,19 @@
 	<footer class="footer">
 		<div class="container">
 			<nav class="footer__menu">
-				<ul class="footer__menu-list">
-					<li><a href="#">Sitemap</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">About us</a></li>
-				</ul>
+
+				<?php wp_nav_menu(array(
+				    'theme_location'  => 'footer_menu',
+				    'container'       => null,
+				    'menu_class'      => 'footer__menu-list',
+				)); ?>
+
 			</nav>
-			<span class="footer__copyright">© Copyright 2020 - Redcliffe Partners</span>
+
+			<?php if (get_field('footer_copy', 'options')) { ?>
+				<span class="footer__copyright"><?php the_field('footer_copy', 'options') ?></span>
+			<?php } ?>
+
 		</div>
 	</footer>
 	

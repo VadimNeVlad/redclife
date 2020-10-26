@@ -23,10 +23,9 @@
     <header class="header <?php echo $header_class; ?>">
         <div class="header__top">
             <div class="container">
-                <div class="header__search-panel">
-                    <input type="text" name="s" placeholder="search">
-                    <button></button>
-                </div>
+
+                <?php get_search_form(); ?>
+                
                 <div class="header__language">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/flag.png" alt="flag">
                     <span>Eng</span>

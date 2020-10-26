@@ -60,48 +60,70 @@ get_header(); ?>
     </section>
 
     <section class="deals">
-        <h2>RECENT DEALS</h2>
+
+        <?php if (get_field('deals_main_title')) { ?>
+            <h2><?php the_field('deals_main_title') ?></h2>
+        <?php } ?>
+
+        <?php $args = array('post_type' => 'post',
+                            'posts_per_page' => 3,
+                            'category_name' => 'projects',
+                            'order' => 'DESC') ?>
+
+        <?php $page_index = new WP_Query($args) ?>
+
         <div class="deals__list">
-            <a href="#" class="deals__item" style="background-image: url(img/deal-1.jpg);">
-                <p><strong>Redcliffe Partners</strong> advised GE Capital on obtaining merger  clearance for the sale of PK AirFinance and its <strong>USD 3.6bn</strong> aviation loan book</p>
-                <span class="deals__item-btn">READ MORE</span>
-            </a>
-            <a href="#" class="deals__item" style="background-image: url(img/deal-2.jpg);">
-                <p><strong>Redcliffe Partners</strong> advised the EBDR on risk-sharing arrangements with Piraeus Bank Ukrainee</p>
-                <span class="deals__item-btn">READ MORE</span>
-            </a>
-            <a href="#" class="deals__item" style="background-image: url(img/deal-3.jpg);">
-                <p><strong>Redcliffe Partners</strong> contributed to a global pro bono project on human right to a healthy environment</p>
-                <span class="deals__item-btn">READ MORE</span>
-            </a>
+            
+            <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+                <a href="<?php echo esc_url( get_permalink() ); ?>" class="deals__item" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                    <p><?php esc_html( the_title() ) ?></p>
+                    <span class="deals__item-btn"><?php the_field('deals_btn_text', 19) ?></span>
+                </a>
+                
+                <?php endwhile; ?>
+
+            <?php endif; ?> 
+
         </div>
+
+        <?php wp_reset_postdata(); ?>
+
     </section>
 
     <section class="news">
-        <h2>LATEST NEWS</h2>
+        
+        <?php if (get_field('news_main_title')) { ?>
+            <h2><?php the_field('news_main_title') ?></h2>
+        <?php } ?>
+
+        <?php $args = array('post_type' => 'post',
+                            'posts_per_page' => 3,
+                            'category_name' => 'news',
+                            'order' => 'DESC') ?>
+
+        <?php $page_index = new WP_Query($args) ?>
+
         <div class="news__list">
-            <a href="#" class="news__item" style="background-image: url(img/news-1.jpg);">
-                <div class="news__item-texts">
-                    <h4>NEWSTITLE 01</h4>
-                    <p>Redcliffe Partners recovers more than EUR 1.3 million for its client under a Vienna International Arbitral Centre (VIAC) award</p>
-                </div>
-                <span class="btn">Read more</span>
-            </a>
-            <a href="#" class="news__item" style="background-image: url(img/news-2.jpg);">
-                <div class="news__item-texts">
-                    <h4>NEWSTITLE 02</h4>
-                    <p>Redcliffe Partners recovers more than EUR 1.3 million for its client under a Vienna International Arbitral Centre (VIAC) award</p>
-                </div>
-                <span class="btn">Read more</span>
-            </a>
-            <a href="#" class="news__item" style="background-image: url(img/news-3.jpg);">
-                <div class="news__item-texts">
-                    <h4>NEWSTITLE 03</h4>
-                    <p>Redcliffe Partners recovers more than EUR 1.3 million for its client under a Vienna International Arbitral Centre (VIAC) award</p>
-                </div>
-                <span class="btn">Read more</span>
-            </a>
+            
+            <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+                <a href="<?php echo esc_url( get_permalink() ); ?>" class="news__item" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                    <div class="news__item-texts">
+                        <h4><?php esc_html( the_title() ) ?></h4>
+                        <p><?php echo wp_trim_words( get_the_content(), 20); ?></p>
+                    </div>
+                    <span class="btn"><?php the_field('news_btn_text', 19) ?></span>
+                </a>
+                
+                <?php endwhile; ?>
+
+            <?php endif; ?> 
+
         </div>
+
+        <?php wp_reset_postdata(); ?>
+
     </section>
 
 <?php get_footer(); ?>

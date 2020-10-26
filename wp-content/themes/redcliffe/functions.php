@@ -14,6 +14,7 @@
 
 		register_nav_menus( array(
 			'header_menu' => 'Меню в шапке',
+			'footer_menu' => 'Меню в подвале',
 		));
 	}
 
@@ -38,7 +39,7 @@
 	=============================================*/
 
 	add_filter( 'excerpt_length', function(){
-		return 30;
+		return 60;
 	} );
 
 	add_filter('excerpt_more', function($more) {
