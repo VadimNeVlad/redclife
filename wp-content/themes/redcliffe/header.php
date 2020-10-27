@@ -27,8 +27,7 @@
                 <?php get_search_form(); ?>
                 
                 <div class="header__language">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/flag.png" alt="flag">
-                    <span>Eng</span>
+                    <?php do_action('wpml_add_language_selector'); ?>    
                 </div>
             </div>
         </div>

@@ -100,3 +100,67 @@ h2 {
 .search-title-nofound {
   padding-top: 7rem;
 }
+
+.wpml-ls-legacy-dropdown-click a {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  width: auto;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+  padding: 0;
+}
+
+.wpml-ls-legacy-dropdown-click {
+  width: auto;
+}
+
+.wpml-ls-legacy-dropdown-click a:hover, .wpml-ls-legacy-dropdown-click a:focus, .wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a {
+  background-color: transparent;
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
+  display: none;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-flag {
+  width: 2.5rem;
+  height: auto;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+  background-color: rgba(0, 0, 0, 0.86);
+  padding-left: 7px;
+  padding-right: 7px;
+  left: -7px;
+  border: none;
+}
+
+.wpml-ls-display {
+  display: none !important;
+}
+
+.js-wpml-ls-sub-menu li {
+
+  padding-bottom: 15px !important;
+
+  &:first-child {
+    padding-top: 15px !important;
+  }
+
+  .wpml-ls-flag {
+    width: 2rem;
+  }
+
+  span {
+    font-size: 10px !important;
+  }
+  
+}

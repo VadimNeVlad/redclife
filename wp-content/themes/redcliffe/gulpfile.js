@@ -46,8 +46,8 @@ gulp.task('js', function () {
         .pipe(gulp.dest(path.build.js))
         .pipe(ftp({
             host: 'ftp.case-digital.com',
-            user: 'dev@case-digital.info',
-            pass: '=y*DiwezJ^Di',
+            user: 'webdev@case-digital.info',
+            pass: 'uVmP.^P9Jp74',
             remotePath: '/wp-content/themes/redcliffe/assets/js'
         }))
 });
@@ -59,8 +59,8 @@ gulp.task('js-min', function () {
         .pipe(gulp.dest(path.build.js))
         .pipe(ftp({
             host: 'ftp.case-digital.com',
-            user: 'dev@case-digital.info',
-            pass: '=y*DiwezJ^Di',
+            user: 'webdev@case-digital.info',
+            pass: 'uVmP.^P9Jp74',
             remotePath: '/wp-content/themes/redcliffe/assets/js'
         }))
 });
@@ -74,8 +74,8 @@ gulp.task('styles', function () {
         .pipe(gulp.dest(path.build.css))
         .pipe(ftp({
             host: 'ftp.case-digital.com',
-            user: 'dev@case-digital.info',
-            pass: '=y*DiwezJ^Di',
+            user: 'webdev@case-digital.info',
+            pass: 'uVmP.^P9Jp74',
             remotePath: '/wp-content/themes/redcliffe/assets/css'
         }))
 });
@@ -91,8 +91,8 @@ gulp.task('styles-min', function () {
         .pipe(gulp.dest(path.build.css))
         .pipe(ftp({
             host: 'ftp.case-digital.com',
-            user: 'dev@case-digital.info',
-            pass: '=y*DiwezJ^Di',
+            user: 'webdev@case-digital.info',
+            pass: 'uVmP.^P9Jp74',
             remotePath: '/wp-content/themes/redcliffe/assets/css'
         }))
 });
