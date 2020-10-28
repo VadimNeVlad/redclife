@@ -30,7 +30,6 @@ function custom_post_type_team() {
 			'editor'
 		),
 		'hierarchical'          => false,
-		'taxonomies'  => array( 'category' ),
 		'supports' => ['title', 'editor', 'thumbnail'],
 		'public'                => true,
 		'show_ui'               => true,

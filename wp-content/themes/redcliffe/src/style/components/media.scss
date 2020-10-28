@@ -1043,6 +1043,10 @@
   .sitemap {
     padding-top: 22rem;
   }
+
+  .header.sticky .header__logo {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 370px) {

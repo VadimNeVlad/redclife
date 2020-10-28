@@ -98,9 +98,21 @@
 					</div>
 				</div>
 
+				<?php
+					$term = wp_get_post_terms( $post->ID, 'taxonomy' );
+				?>
+
+
 				<?php $args = array('post_type' => 'practices',
 									'posts_per_page' => -1,
 									'orderby' => 'title',
+									'tax_query' => array(
+									    array(
+									      'taxonomy' => 'taxonomy',
+									      'field'    => 'slug',
+									      'terms'    => $term[0]->slug
+									    )
+									),
 									'order' => 'ASC') ?>
 
 				<?php $page_index = new WP_Query($args) ?>
@@ -122,5 +134,6 @@
 	</section>
 
 	<?php get_template_part( 'components/brochure' ); ?>
+
 
 <?php get_footer(); ?>

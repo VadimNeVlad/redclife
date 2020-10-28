@@ -1,6 +1,6 @@
 	<footer class="footer">
 		<div class="container">
-			<nav class="footer__menu">
+			<nav class="footer__menu wow fadeIn">
 
 				<?php wp_nav_menu(array(
 				    'theme_location'  => 'footer_menu',
@@ -11,7 +11,7 @@
 			</nav>
 
 			<?php if (get_field('footer_copy', 'options')) { ?>
-				<span class="footer__copyright"><?php the_field('footer_copy', 'options') ?></span>
+				<span class="footer__copyright wow fadeInUp" data-wow-delay=".3s"><?php the_field('footer_copy', 'options') ?></span>
 			<?php } ?>
 
 		</div>

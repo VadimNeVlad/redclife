@@ -1,3 +1,11 @@
+
+wow = new WOW(
+    {
+    mobile:       false,       // default
+  }
+  )
+wow.init();
+
 $(function () {
 
   $('.burger-content').on('click', function () {
@@ -27,4 +35,14 @@ $(function () {
     e.preventDefault();
 
   });
+
+
+  $(window).scroll(function(){
+    var sticky = $('.header'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 1) sticky.addClass('sticky');
+    else sticky.removeClass('sticky');
+  });
+
 });

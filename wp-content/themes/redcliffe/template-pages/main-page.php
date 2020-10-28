@@ -5,7 +5,7 @@
 
 get_header(); ?>
     
-    <section class="intro  intro--bg-dark" style="background-image: url(<?php the_field('hp_bg') ?>);">
+    <section class="intro wow fadeIn  intro--bg-dark" style="background-image: url(<?php the_field('hp_bg') ?>);">
         <div class="container">
 
             <?php if (get_field('hp_intro_title')) { ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 
     <section class="about">
         <div class="container">
-            <div class="about__title-content">
+            <div class="about__title-content wow fadeInLeft">
                 <?php if (get_field('hp_about_title')) { ?>
                     <strong><?php the_field('hp_about_title') ?></strong>
                 <?php } ?>
@@ -37,7 +37,7 @@ get_header(); ?>
             </div>
 
             <?php if( have_rows('about_benefits_list', 143) ): ?>   
-                <div class="about__list">
+                <div class="about__list  wow fadeInUp" data-wow-delay=".3s">
                     <?php while( have_rows('about_benefits_list', 143) ): the_row(); 
                         $img = get_sub_field('about_benefits_list_img', 143);
                         $text = get_sub_field('about_benefits_list_text', 143);
@@ -62,7 +62,7 @@ get_header(); ?>
     <section class="deals">
 
         <?php if (get_field('deals_main_title')) { ?>
-            <h2><?php the_field('deals_main_title') ?></h2>
+            <h2 class="wow fadeInLeft"><?php the_field('deals_main_title') ?></h2>
         <?php } ?>
 
         <?php $args = array('post_type' => 'post',
@@ -72,7 +72,7 @@ get_header(); ?>
 
         <?php $page_index = new WP_Query($args) ?>
 
-        <div class="deals__list">
+        <div class="deals__list  wow fadeInUp" data-wow-delay=".3s">
             
             <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
@@ -94,7 +94,7 @@ get_header(); ?>
     <section class="news">
         
         <?php if (get_field('news_main_title')) { ?>
-            <h2><?php the_field('news_main_title') ?></h2>
+            <h2 class="wow fadeInLeft"><?php the_field('news_main_title') ?></h2>
         <?php } ?>
 
         <?php $args = array('post_type' => 'post',
@@ -104,7 +104,7 @@ get_header(); ?>
 
         <?php $page_index = new WP_Query($args) ?>
 
-        <div class="news__list">
+        <div class="news__list  wow fadeInUp" data-wow-delay=".3s">
             
             <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
