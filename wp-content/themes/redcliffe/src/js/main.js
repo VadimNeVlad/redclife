@@ -45,4 +45,13 @@ $(function () {
     else sticky.removeClass('sticky');
   });
 
+
+
+  $(".team__search-select").on("change", function(){
+
+    let selectVal = `${$('.select-practices').val()} ${$('.select-industries').val()}`;
+
+    $('.search-hiden-input').val(selectVal);
+  });
+
 });

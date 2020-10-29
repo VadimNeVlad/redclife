@@ -103,6 +103,27 @@
 				color: #0d0d0d;
 			}
 		}
+
+		select {
+			font-size: 1.4rem;
+			font-weight: 500;
+			letter-spacing: 1.4px;
+			color: #0d0d0d;
+			width: 100%;
+			border: solid 1px #0d0d0d;
+			background-color: #ffffff;
+			height: 6rem;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			cursor: pointer;
+			outline: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+
+			option {
+				font-size: 1.3rem;
+			}
+		}
 	}
 
 	&__info-list {
@@ -166,5 +187,23 @@
 		background-image: url("../img/www.svg");
 		width: 2rem;
 		height: 2rem;
+	}
+}
+
+.contact-us__field--select {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url("../img/down-chevron.svg");
+		pointer-events: none;
+		width: 1.2rem;
+		height: 1.2rem;
+		background-size: contain;
+		background-repeat: no-repeat;
+		right: 15px;
+		top: 2.5rem;
+		z-index: 1;
 	}
 }

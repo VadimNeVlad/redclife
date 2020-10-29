@@ -24,11 +24,66 @@ get_header(); ?>
                 <h2><?php the_field('team_arch_main_title') ?></h2>
             <?php } ?>
 
-            <form class="team__search" role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
+            <form class="team__search" role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform2">
+
+                <?php $args = array('post_type' => 'practices',
+                                    'posts_per_page' => -1,
+                                    'tax_query' => array(
+                                        array(
+                                          'taxonomy' => 'taxonomy',
+                                          'field'    => 'slug',
+                                          'terms'    => 'practices'
+                                        )
+                                    ),
+                                    'orderby' => 'title',
+                                    'order' => 'ASC') ?>
+
+                <?php $page_index = new WP_Query($args) ?>
+
                 <div class="team__search-field">
-                    <input type="text" name="s" placeholder="PRACTICES" />
-                </div>
-               <input type="hidden" name="post_type" value="team" /> <!-- // hidden 'products' value -->
+                    <select class="team__search-select  select-practices">
+                    <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+                            <option value="" selected hidden><?php the_field('practices_arch_cat_title_1', 355) ?></option>
+                            <option value="<?php echo esc_html( the_title() ); ?>"><?php echo esc_html( the_title() ); ?></option>
+                        
+                        <?php endwhile; ?>
+
+                    <?php endif; ?> 
+                    </select>
+                </div>  
+                <?php wp_reset_postdata(); ?>   
+
+                <?php $args = array('post_type' => 'practices',
+                                    'posts_per_page' => -1,
+                                    'tax_query' => array(
+                                        array(
+                                          'taxonomy' => 'taxonomy',
+                                          'field'    => 'slug',
+                                          'terms'    => 'industries'
+                                        )
+                                    ),
+                                    'orderby' => 'title',
+                                    'order' => 'ASC') ?>
+
+                <?php $page_index = new WP_Query($args) ?>
+
+                <div class="team__search-field">
+                    <select class="team__search-select  select-industries">
+                    <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+                            <option value="" selected hidden><?php the_field('practices_arch_cat_title_2', 355) ?></option>
+                            <option value="<?php echo esc_html( the_title() ); ?>"><?php echo esc_html( the_title() ); ?></option>
+                        
+                        <?php endwhile; ?>
+
+                    <?php endif; ?> 
+                    </select>
+                </div>  
+                <?php wp_reset_postdata(); ?>   
+                
+                <input type="hidden" class="search-hiden-input" name="s" type="text">
+                <input type="hidden" name="post_type" value="team" /> <!-- // hidden 'products' value -->
 
                <?php if (get_field('team_arch_btn_search')) { ?>
                    <button class="btn  btn-red"><?php the_field('team_arch_btn_search') ?></button>

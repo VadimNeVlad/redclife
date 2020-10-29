@@ -13,10 +13,24 @@
 	}
 
 	&__search-field {
+		position: relative;
 		max-width: 30rem;
 		width: 100%;
-		border: 1px solid rgba(#0d0d0d, 0.3);
 		margin-right: 2rem;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url("../img/down-chevron.svg");
+			pointer-events: none;
+			width: 1.2rem;
+			height: 1.2rem;
+			background-size: contain;
+			background-repeat: no-repeat;
+			right: 15px;
+			top: 2.5rem;
+			z-index: 1;
+		}
 
 		input {
 			width: 100%;
@@ -33,6 +47,22 @@
 				opacity: 1;
 				color: #0d0d0d;
 			}
+		}
+
+		select {
+			width: 100%;
+			font-size: 1.4rem;
+			text-transform: uppercase;
+			font-weight: 500;
+			letter-spacing: 1.4px;
+			height: 5.8rem;
+			padding-left: 2.3rem;
+			padding-right: 2.3rem;
+			color: #0d0d0d;
+			outline: none;
+			border: 1px solid rgba(#0d0d0d, 0.3);
+			-webkit-appearance: none;
+			-moz-appearance: none;
 		}
 	}
 
