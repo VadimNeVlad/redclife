@@ -5,7 +5,7 @@
 
 get_header(); ?>
     
-    <section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('practices_bg') ?>);">
+    <section class="intro  wow fadeIn  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('practices_bg') ?>);">
         <div class="container">
 
             <?php if (get_field('practices_arch_title')) { ?>
@@ -23,13 +23,13 @@ get_header(); ?>
         <div class="container-small">
 
             <?php if (get_field('practices_arch_expertise_title')) { ?>
-                <div class="about__title-content">
+                <div class="about__title-content  wow fadeInLeft">
                     <?php the_field('practices_arch_expertise_title') ?>
                 </div>
             <?php } ?>
 
             <?php if (get_field('practices_arch_expertise_text')) { ?>
-                <div class="about__info">
+                <div class="about__info  wow fadeInUp" data-wow-delay=".3s">
                     <?php the_field('practices_arch_expertise_text') ?>
                 </div>
             <?php } ?>
@@ -41,7 +41,7 @@ get_header(); ?>
         <div class="container">
 
             <?php if (get_field('practices_arch_cat_title_1')) { ?>
-                <h2><?php the_field('practices_arch_cat_title_1') ?></h2>
+                <h2 class="wow fadeInLeft"><?php the_field('practices_arch_cat_title_1') ?></h2>
             <?php } ?>
 
             <?php $args = array('post_type' => 'practices',
@@ -62,7 +62,7 @@ get_header(); ?>
                 <div class="items-list__list">
                 <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
-                    <div class="items-list__item-wrap">
+                    <div class="items-list__item-wrap  wow fadeInUp" data-wow-delay=".3s">
                         <a href="<?php echo esc_url( get_permalink() ); ?>" class="items-list__item"><?php echo esc_html( the_title() ); ?></a>
                     </div>
                     
@@ -74,7 +74,7 @@ get_header(); ?>
             <?php wp_reset_postdata(); ?>   
             
             <?php if (get_field('practices_arch_cat_title_2')) { ?>
-                <h2><?php the_field('practices_arch_cat_title_2') ?></h2>
+                <h2 class="wow fadeInLeft"><?php the_field('practices_arch_cat_title_2') ?></h2>
             <?php } ?>
 
             <?php $args = array('post_type' => 'practices',
@@ -95,7 +95,7 @@ get_header(); ?>
                 <div class="items-list__list">
                 <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
-                    <div class="items-list__item-wrap">
+                    <div class="items-list__item-wrap  wow fadeInUp" data-wow-delay=".3s">
                         <a href="<?php echo esc_url( get_permalink() ); ?>" class="items-list__item"><?php echo esc_html( the_title() ); ?></a>
                     </div>
                     

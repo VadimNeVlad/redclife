@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+	<section class="intro  wow fadeIn  intro--inner  intro--center-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
 		<div class="container">
 
 			<?php if (get_field('careers_single_subtitle')) { ?>
@@ -17,7 +17,7 @@
 	<section class="content-page  practice-content">
 		<div class="container">
 			<div class="practice-content__content  tabs-info-js">
-				<div class="practice-content__info">
+				<div class="practice-content__info  wow fadeInLeft">
 					
 					<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
@@ -46,7 +46,7 @@
 
 					<?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
-						<a href="<?php echo esc_url( get_permalink() ); ?>" class="items-list__item"><?php echo esc_html( the_title() ); ?></a>
+						<a href="<?php echo esc_url( get_permalink() ); ?>" class="items-list__item wow fadeInUp"><?php echo esc_html( the_title() ); ?></a>
 						
 						<?php endwhile; ?>
 

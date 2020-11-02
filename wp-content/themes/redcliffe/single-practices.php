@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+	<section class="intro  wow fadeIn  intro--inner  intro--center-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
 		<div class="container">
 
 			<?php if (get_field('practice_single_title')) { ?>
@@ -17,7 +17,7 @@
 	<section class="content-page  practice-content">
 		<div class="container">
 			<div class="practice-content__content  tabs-info-js">
-				<div class="practice-content__info">
+				<div class="practice-content__info  wow fadeInLeft">
 					<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
 					    <h2><?php esc_html( the_title() ) ?></h2>
@@ -68,32 +68,95 @@
 
 						</div>
 						<div class="team-content__tabs-content  tabs-list-js">
-							<p>For the twelfth consecutive year he is named as an outstanding practitioner in Banking & Finance, Debt & Equity, Capital Markets and Project Finance and Development practices, according to Best Lawyers 2021, and received the “Lawyer of the Year” award for Ukraine in the Banking and Finance Law category. Olexiy is also recommended in Banking - Finance  and Project Finance categories in Who's Who Legal 2020 edition as "a very impressive lawyer" who is "well-known and praised for his experience in financing transactions".</p>
-							<p>Olexiy was featured as a Leading Individual for Debt Restructuring and Banking & Finance by Ukrainian Law Firms. A Handbook for Foreign Clients 2019. He is also ranked amongst practice leaders in Banking & Finance, Debt Restructuring and ranked in the top 100 Ukrainian lawyers according to Client Choice. Top-100 Best Lawyers of Ukraine 2019.</p>
-						</div>
-						<div class="team-content__tabs-content  tabs-list-js">
-							<div class="practice-content__reviews">
-								<div class="practice-content__review-item">
-									<p>Ranked in Competition. "Newly promoted partner Anastasia Usova leads the practice at Redcliffe Partners, which handles complex competition matters relating to abuse of dominance, cartels, commercial and pricing practices, and distribution agreements, as well as merger control filings in the CIS and the EU."</p>
-									<span>The Legal 500 2020</span>
-								</div>
-								<div class="practice-content__review-item">
-									<p>Top-3 law firm by both number and value of public deals in Antitrust</p>
-									<span>Top-50 Law Firms in Ukraine</span>
-								</div>
-								<div class="practice-content__review-item">
-									<p>Recommended among Top-3 in Competition</p>
-									<span>The Market Leaders 2019</span>
-								</div>
-								<div class="practice-content__review-item">
-									<p>Ranked as an Established Practice in Antitrust and Competition</p>
-									<span>The Ukrainian Law Firms 2019</span>
-								</div>
+							<?php
+							    $tag = get_queried_object();
+							?>
+
+
+							<?php $args = array('post_type' => 'post',
+							                    'posts_per_page' => 15,
+							                    'category_name' => 'projects',
+							                    'tag' => $tag->post_name,
+							                    'order' => 'DESC') ?>
+
+							<?php $page_index = new WP_Query($args) ?>
+
+							<div class="news-content__recent-list">
+							
+							<?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+							    <a href="<?php echo esc_url( get_permalink() ); ?>" class="news-content__recent-item">
+							        <div class="news-content__recent-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+							        <div class="news-content__recent-info">
+							            <p><?php esc_html( the_title() ) ?></p>
+							            <span class="news-content__recent-date"><?php esc_html( the_date('F j Y') ) ?></span>
+							        </div>
+							    </a>
+							    
+							    <?php endwhile; ?>
+
+							<?php endif; ?> 
+
 							</div>
+
+							<?php wp_reset_postdata(); ?>  
 						</div>
 						<div class="team-content__tabs-content  tabs-list-js">
-							<p>For the twelfth consecutive year he is named as an outstanding practitioner in Banking & Finance, Debt & Equity, Capital Markets and Project Finance and Development practices, according to Best Lawyers 2021, and received the “Lawyer of the Year” award for Ukraine in the Banking and Finance Law category. Olexiy is also recommended in Banking - Finance  and Project Finance categories in Who's Who Legal 2020 edition as "a very impressive lawyer" who is "well-known and praised for his experience in financing transactions".</p>
-							<p>Olexiy was featured as a Leading Individual for Debt Restructuring and Banking & Finance by Ukrainian Law Firms. A Handbook for Foreign Clients 2019. He is also ranked amongst practice leaders in Banking & Finance, Debt Restructuring and ranked in the top 100 Ukrainian lawyers according to Client Choice. Top-100 Best Lawyers of Ukraine 2019.</p>
+
+							<?php
+							    $tag = get_queried_object();
+							?>
+
+							<?php $args = array('post_type' => 'post',
+							                    'posts_per_page' => 15,
+							                    'category_name' => 'publications',
+							                    'tag' => $tag->post_name,
+							                    'order' => 'DESC') ?>
+
+							<?php $page_index = new WP_Query($args) ?>
+
+							<div class="news-content__recent-list">
+							
+							<?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+							    <a href="<?php echo esc_url( get_permalink() ); ?>" class="news-content__recent-item">
+							        <div class="news-content__recent-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+							        <div class="news-content__recent-info">
+							            <p><?php esc_html( the_title() ) ?></p>
+							            <span class="news-content__recent-date"><?php esc_html( the_date('F j Y') ) ?></span>
+							        </div>
+							    </a>
+							    
+							    <?php endwhile; ?>
+
+							<?php endif; ?> 
+
+							</div>
+
+							<?php wp_reset_postdata(); ?>     
+						</div>
+						<div class="team-content__tabs-content  tabs-list-js">
+
+							<?php if( have_rows('brochure_list') ): ?>   
+							    <div class="team-content__tab-brochure-list">
+							        <?php while( have_rows('brochure_list') ): the_row(); 
+							            $img = get_sub_field('brochure_list_img');
+							            $text = get_sub_field('brochure_list_title');
+							            $file = get_sub_field('brochure_list_file');
+
+							            ?>
+
+							            <div class="team-content__tab-brochure-wrap">
+							            	<a href="<?php echo $file; ?>" class="team-content__tab-brochure-item" download>
+							            		<div class="team-content__tab-brochure-img" style="background-image: url(<?php echo $img; ?>);"></div>
+							            		<p><?php echo $text; ?></p>
+							            	</a>
+							            </div>
+
+							        <?php endwhile; ?>  
+							    </div>
+							<?php endif; ?> 
+							
 						</div>
 					</div>
 				</div>
@@ -120,7 +183,7 @@
 				<div class="practice-content__sidebars">
 					<?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
-						<div class="items-list">
+						<div class="items-list  wow fadeInUp" data-wow-delay=".3s">
 							<a href="<?php echo esc_url( get_permalink() ); ?>" class="items-list__item"><?php echo esc_html( the_title() ); ?></a>
 						</div>
 						
@@ -134,6 +197,7 @@
 	</section>
 
 	<?php get_template_part( 'components/brochure' ); ?>
+	
 
 
 <?php get_footer(); ?>

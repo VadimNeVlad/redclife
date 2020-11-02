@@ -22,14 +22,15 @@
 	}
 
 	&__link {
+		display: inline-block;
 		font-size: 1.7rem;
 		font-weight: 500;
 		letter-spacing: 1.7px;
-		color: #0d0d0d;
+		color: #fff;
 		transition: all .3s;
 
 		&:hover {
-			color: #cd2028;
+			transform: translate(5px, 0)
 		}
 	}
 }
@@ -50,4 +51,9 @@
 .intro--search {
 	padding-top: 32.7rem;
 	padding-bottom: 20.5rem;
+}
+
+.intro--homepage {
+	padding-top: 25.8rem;
+    padding-bottom: 15rem;
 }

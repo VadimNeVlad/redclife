@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section class="intro  intro--inner  intro--search  intro--center-bg" style="background-image: url(<?php the_field('search_bg', 'options') ?>);">
+	<section class="intro  wow fadeIn  intro--inner  intro--search  intro--center-bg" style="background-image: url(<?php the_field('search_bg', 'options') ?>);">
 		<div class="container">
 
 			<?php if (get_field('search_title_text', 'options')) { ?>
@@ -12,7 +12,7 @@
 
 	<section class="search-result">
 		<div class="container">
-			<div class="search-result__title-content">
+			<div class="search-result__title-content  wow fadeInLeft">
 
 				<?php if (get_field('search_resukt_text', 'options')) { ?>
 					<h2><?php the_field('search_resukt_text', 'options') ?> <span><?php echo get_query_var('s') ?></span></h2>
@@ -48,7 +48,7 @@
 
 			    	<?php while ( $page_index->have_posts() ) : $page_index->the_post(); ?>
 
-			    		<a href="<?php echo esc_url( get_permalink() ); ?>" class="search-result__item">
+			    		<a href="<?php echo esc_url( get_permalink() ); ?>" class="search-result__item  wow fadeInUp" data-wow-delay=".3s">
 			    			<h4><?php echo esc_html( the_title() ); ?></h4>
 			    			<?php echo esc_html( the_excerpt() ); ?>
 			    		</a>
@@ -57,7 +57,7 @@
 			    		
 			    </div>
 
-			    <div class="pagination">
+			    <div class="pagination  wow fadeInUp">
 			        <div class="pagination__links">
 			            <?php if ($page_index->max_num_pages > 1) : // custom pagination  ?>
 			                <?php

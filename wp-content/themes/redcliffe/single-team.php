@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <section class="team-intro" style="background-image: url(<?php the_field('team_single_bg') ?>);">
+    <section class="team-intro  wow fadeIn" style="background-image: url(<?php the_field('team_single_bg') ?>);">
         <div class="container">
 
             <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
@@ -20,7 +20,7 @@
     <section class="content-page  team-content">
         <div class="container">
             <div class="team-content__content  tabs-info-js">
-                <div class="team-content__info">
+                <div class="team-content__info  wow fadeInLeft">
                     <?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
                         <?php esc_html( the_content() ) ?>
@@ -44,26 +44,58 @@
 
                     <?php endif; ?>
 
+                    <div class="team-content__tabs-wrap-content">
+                        <div class="team-content__tabs-content  tabs-list-js active">
 
-                    <?php $tabs = get_field('team_single_tab-content'); ?>
+                            <?php if( have_rows('team_single_tab-content') ): ?>   
+                                <?php while( have_rows('team_single_tab-content') ): the_row(); 
+                                    $text = get_sub_field('team_single_tab_text');
 
-                    <?php if ( $tabs ) : ?>
-                        <div class="team-content__tabs-wrap-content">
-                            <?php foreach ($tabs as $i => $tab) : ?>
-                                <div class="team-content__tabs-content  tabs-list-js  <?php echo ($i == 0) ? 'active' : ''; ?>">
+                                    ?>
 
-                                    <?php echo $tab['team_single_tab_text']; ?>
+                                    <?php echo $text; ?>
 
-                                </div>
+                                <?php endwhile; ?>  
+                            <?php endif; ?> 
 
-                            <?php endforeach ?>
                         </div>
+                        <div class="team-content__tabs-content  tabs-list-js">
+                            <?php
+                                $tag = get_queried_object();
+                            ?>
 
-                    <?php endif; ?>
-    
+
+                            <?php $args = array('post_type' => 'post',
+                                                'posts_per_page' => 15,
+                                                'tag' => $tag->post_name,
+                                                'order' => 'DESC') ?>
+
+                            <?php $page_index = new WP_Query($args) ?>
+
+                            <div class="news-content__recent-list">
+                            
+                            <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
+
+                                <a href="<?php echo esc_url( get_permalink() ); ?>" class="news-content__recent-item">
+                                    <div class="news-content__recent-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+                                    <div class="news-content__recent-info">
+                                        <p><?php esc_html( the_title() ) ?></p>
+                                        <span class="news-content__recent-date"><?php esc_html( the_date('F j Y') ) ?></span>
+                                    </div>
+                                </a>
+                                
+                                <?php endwhile; ?>
+
+                            <?php endif; ?> 
+
+                            </div>
+
+                            <?php wp_reset_postdata(); ?>   
+                        </div>
+                    </div>
                 </div>
                 <div class="team-content__sidebars">
-                    <div class="team-content__sidebar  team-content__sidebar--contacts">
+                    <div class="team-content__sidebar  team-content__sidebar--contacts  wow fadeInUp">
 
                         <?php if (get_field('team_single_contact_title')) { ?>
                             <h4><?php the_field('team_single_contact_title') ?></h4>
@@ -84,7 +116,7 @@
                     </div>
 
                     <?php if (get_field('team_single_career_text')) { ?>
-                        <div class="team-content__sidebar">
+                        <div class="team-content__sidebar  wow fadeInUp">
 
                             <?php if (get_field('team_single_career_title')) { ?>
                                 <h4><?php the_field('team_single_career_title') ?></h4>
@@ -96,7 +128,7 @@
                     <?php } ?>
 
                     <?php if (get_field('team_single_quality_text')) { ?>
-                        <div class="team-content__sidebar  team-content__sidebar--reputation">
+                        <div class="team-content__sidebar  team-content__sidebar--reputation  wow fadeInUp">
 
                             <?php if (get_field('team_single_quality_titile')) { ?>
                                 <h4><?php the_field('team_single_quality_titile') ?></h4>

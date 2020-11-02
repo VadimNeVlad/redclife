@@ -5,7 +5,7 @@
 
 get_header(); ?>
     
-    <section class="intro wow fadeIn  intro--bg-dark" style="background-image: url(<?php the_field('hp_bg') ?>);">
+    <section class="intro  intro--homepage  intro--inner wow fadeIn " style="background-image: url(<?php the_field('hp_bg') ?>);">
         <div class="container">
 
             <?php if (get_field('hp_intro_title')) { ?>

@@ -1,4 +1,4 @@
-<section class="brochure" style="background-image: url(<?php the_field('brochure_bg', 'options') ?>);">
+<section class="brochure  wow fadeIn" style="background-image: url(<?php the_field('brochure_bg', 'options') ?>);">
     <div class="container-small">
 
     	<?php if (get_field('brochure_title', 'options')) { ?>

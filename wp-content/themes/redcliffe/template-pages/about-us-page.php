@@ -5,7 +5,7 @@
 
 get_header(); ?>
     
-    <section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('about_bg') ?>);">
+    <section class="intro  wow fadeIn  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('about_bg') ?>);">
         <div class="container">
 
             <?php if (get_field('about_subtitle')) { ?>
@@ -23,11 +23,11 @@ get_header(); ?>
         <div class="container">
 
             <?php if (get_field('about_main_title')) { ?>
-                <h2><?php the_field('about_main_title') ?></h2>
+                <h2 class="wow fadeInLeft"><?php the_field('about_main_title') ?></h2>
             <?php } ?>
 
             <?php if( have_rows('about_benefits_list') ): ?>   
-                <div class="about__list">
+                <div class="about__list  wow fadeInUp"  data-wow-delay=".3s">
                     <?php while( have_rows('about_benefits_list') ): the_row(); 
                         $img = get_sub_field('about_benefits_list_img');
                         $text = get_sub_field('about_benefits_list_text');
@@ -51,7 +51,7 @@ get_header(); ?>
         <div class="container">
             
             <?php if (get_field('about_rep_title')) { ?>
-                <h2><?php the_field('about_rep_title') ?></h2>
+                <h2 class="wow fadeInLeft"><?php the_field('about_rep_title') ?></h2>
             <?php } ?>
 
             <?php if( have_rows('about_rep_list') ): ?>   
@@ -63,7 +63,7 @@ get_header(); ?>
 
                         ?>
 
-                        <div class="reputation__item-wrap">
+                        <div class="reputation__item-wrap  wow fadeInUp"  data-wow-delay=".3s">
                             <div class="reputation__item" style="background-image: url(<?php echo $img; ?>);">
                                 <em><?php echo $quote; ?></em>
                                 <div class="reputation__item-titles">

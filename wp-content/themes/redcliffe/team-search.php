@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     
-    <section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('team_arch_bg', 347) ?>);">
+    <section class="intro  wow fadeIn  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('team_arch_bg', 347) ?>);">
         <div class="container">
             <?php if (get_field('team_arch_title', 347)) { ?>
                 <span class="intro__panel"><?php the_field('team_arch_title', 347) ?></span>
@@ -16,10 +16,10 @@
         <div class="container">
 
             <?php if (get_field('team_arch_main_title')) { ?>
-                <h2><?php the_field('team_arch_main_title') ?></h2>
+                <h2 class="wow fadeInLeft"><?php the_field('team_arch_main_title') ?></h2>
             <?php } ?>
 
-            <form class="team__search" role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform2">
+            <form class="team__search  wow zoomIn" data-wow-delay=".3s" role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform2">
                 <?php $args = array('post_type' => 'practices',
                                     'posts_per_page' => -1,
                                     'tax_query' => array(
@@ -104,7 +104,7 @@
                     <?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
                     <div class="team__item-wrap">
-                        <div class="team__item">
+                        <div class="team__item  wow fadeInUp" data-wow-delay=".3s">
                             <div class="team__item-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
                             <div class="team__item-content">
                                 <strong class="team__item-name"><?php echo esc_html( the_title() ); ?></strong>

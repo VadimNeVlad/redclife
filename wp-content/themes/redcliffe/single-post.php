@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 	
-	<section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('news_single_bg') ?>);">
+	<section class="intro  wow fadeIn intro--inner  intro--center-bg" style="background-image: url(<?php the_field('news_arch_bg', 277) ?>);">
 		<div class="container">
 
-			<?php if (get_field('news_single_subtitle')) { ?>
-			    <span class="intro__panel"><?php the_field('news_single_subtitle') ?></span>
-			<?php } ?>
+			<?php if (get_field('news_arch_subtitle', 277)) { ?>
+    		    <span class="intro__panel"><?php the_field('news_arch_subtitle', 277) ?></span>
+    		<?php } ?>
 
-			<?php if (get_field('news_single_title')) { ?>
-			    <?php the_field('news_single_title') ?>
-			<?php } ?>
+    		<?php if (get_field('news_arch_title', 277)) { ?>
+    		    <?php the_field('news_arch_title', 277) ?>
+    		<?php } ?>
 
 		</div>
 	</section>
@@ -17,9 +17,12 @@
 	<section class="content-page  news-content--single  news-content">
 		<div class="container">
 			<div class="practice-content__content  tabs-info-js">
-				<div class="practice-content__info">
+				<div class="practice-content__info  wow fadeInLeft">
 					<div class="news-content__news-list">
-						<div class="news-content__item-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+						<?php if ((get_the_post_thumbnail_url())) { ?>
+							<div class="news-content__item-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+						<?php } ?>
+						
 						<span class="news-content__date"><?php esc_html( the_time('F j, Y') ) ?></span>
 
 						<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
@@ -53,7 +56,7 @@
 					    ?>
 
 					    <?php if ($posts_cats) { ?>
-					    	<div class="items-list">
+					    	<div class="items-list  wow fadeInUp">
 
 		                        <?php foreach ($posts_cats as $posts_cat) { ?>
 		                        	<a href="<?php echo esc_url( get_term_link( $posts_cat ) ) ?>" class="items-list__item"><?php echo $posts_cat->name; ?></a>
@@ -64,7 +67,7 @@
 					       
 					    <?php } ?>
 
-					<div class="team-content__sidebar  news-content__recent">
+					<div class="team-content__sidebar  news-content__recent  wow fadeInUp">
 
 						<?php if (get_field('news_arch_recent')) { ?>
 							<h4><?php the_field('news_arch_recent') ?></h4>

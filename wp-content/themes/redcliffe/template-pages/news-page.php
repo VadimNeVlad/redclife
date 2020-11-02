@@ -5,7 +5,7 @@
 
 get_header(); ?>
     
-    <section class="intro  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('news_arch_bg') ?>);">
+    <section class="intro  wow fadeIn  intro--inner  intro--center-bg" style="background-image: url(<?php the_field('news_arch_bg') ?>);">
     	<div class="container">
 
     		<?php if (get_field('news_arch_subtitle')) { ?>
@@ -37,8 +37,11 @@ get_header(); ?>
     					
     					<?php if ($page_index->have_posts() ) :  while ( $page_index->have_posts() ) : $page_index->the_post();?>
 
-    						<a href="<?php echo esc_url( get_permalink() ); ?>" class="news-content__news-item">
-    							<div class="news-content__item-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+    						<a href="<?php echo esc_url( get_permalink() ); ?>" class="news-content__news-item  wow fadeInLeft">
+                                <?php if ((get_the_post_thumbnail_url())) { ?>
+    							    <div class="news-content__item-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+                                <?php } ?>
+
     							<div class="news-content__info-wrap">
     								<span class="news-content__date"><?php esc_html( the_time('F j, Y') ) ?></span>
     								<h3><?php esc_html( the_title() ) ?></h3>
@@ -62,7 +65,7 @@ get_header(); ?>
 
     				</div>
 
-                    <div class="pagination">
+                    <div class="pagination  wow fadeInUp">
                         <div class="pagination__links">
                             <?php if ($page_index->max_num_pages > 1) : // custom pagination  ?>
                                 <?php
@@ -88,7 +91,7 @@ get_header(); ?>
     				<?php wp_reset_postdata(); ?>
 
     			</div>
-    			<div class="practice-content__sidebars">
+    			<div class="practice-content__sidebars  wow fadeInUp" data-wow-delay=".3s">
 
     				    <?php
     				    $posts_cats_args = array(

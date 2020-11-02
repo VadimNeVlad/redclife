@@ -720,7 +720,7 @@
   .team-intro {
     padding-top: 40rem;
     padding-bottom: 7.5rem;
-    background-position: 70% 20px;
+    background-position: 70% 0px;
     z-index: 1;
 
     &::before {
@@ -861,6 +861,11 @@
 
   .search-result__item h4 {
     font-size: 2.2rem;
+  }
+
+  .team-content__tab-brochure-wrap {
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 
 }
@@ -1051,6 +1056,41 @@
   .header.sticky .header__logo {
     font-size: 1.8rem;
   }
+
+  .intro--homepage {
+    padding-top: 27.6rem;
+    padding-bottom: 14.6rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10rem !important;
+    padding-bottom: 0 !important;
+    height: 50rem;
+
+    .container {
+      width: 100%;
+    }
+  }
+
+  .content-page ol {
+    padding-left: 15px;
+  }
+
+  .content-page ol > li {
+    padding-left: 10px;
+  }
+
+  .content-page table {
+    width: 500px;
+  }
+
+  .team-content__tab-brochure-wrap {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  } 
 }
 
 @media (max-width: 370px) {
@@ -1073,7 +1113,7 @@
 
   .team-intro {
     padding-bottom: 3.5rem;
-    background-position: 72% 20px;
+    background-position: 72% 0px;
   }
 
   .careers__item h4 {
