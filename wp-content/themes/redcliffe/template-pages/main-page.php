@@ -17,7 +17,7 @@ get_header(); ?>
             <?php } ?>
 
             <?php if (get_field('hp_intro_btn_text')) { ?>
-                <a href="<?php echo esc_url( get_page_link( 143 ) ); ?>" class="intro__link"><?php the_field('hp_intro_btn_text') ?></a>
+                <a href="<?php the_field('hp_intro_btn_url') ?>" class="intro__link"><?php the_field('hp_intro_btn_text') ?></a>
             <?php } ?>
 
         </div>
@@ -41,6 +41,7 @@ get_header(); ?>
                     <?php while( have_rows('about_benefits_list', 143) ): the_row(); 
                         $img = get_sub_field('about_benefits_list_img', 143);
                         $text = get_sub_field('about_benefits_list_text', 143);
+                        $link = get_sub_field('about_benefits_list_link', 143);
 
                         ?>
 
@@ -49,7 +50,11 @@ get_header(); ?>
                                 <img src="<?php echo $img; ?>" alt="icon">
                             </div>
                             <?php echo $text; ?>
-                            <a href="<?php echo esc_url( get_page_link( 143 ) ); ?>"><?php the_field('hp_about_btn_text') ?></a>
+
+                            <?php if ($link) { ?>
+                                <a href="<?php echo $link; ?>"><?php the_field('hp_about_btn_text') ?></a>
+                            <?php } ?>
+                            
                         </div>
 
                     <?php endwhile; ?>  

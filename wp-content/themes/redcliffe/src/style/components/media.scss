@@ -1091,6 +1091,15 @@
     flex: 0 0 33.333%;
     max-width: 33.333%;
   } 
+
+  .team-intro__position {
+    display: none;
+  }
+
+  .team-intro {
+    padding-top: 43rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 @media (max-width: 370px) {

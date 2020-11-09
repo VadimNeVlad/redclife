@@ -62,6 +62,22 @@ get_header(); ?>
                             <p><a href="https://redcliffe-partners.com" target="_blank"><?php the_field('contact_info_site') ?></a></p>
                         </div>
                     <?php } ?>
+
+                    <?php if( have_rows('contact_social_list') ): ?>   
+                        <div class="contact-us__social-list">
+                            <?php while( have_rows('contact_social_list') ): the_row(); 
+                                $img = get_sub_field('contact_social_list_icon');
+                                $link = get_sub_field('contact_social_list_link');
+
+                                ?>
+
+                                <a href="<?php echo $link; ?>" target="_blank" class="contact-us__social-item">
+                                    <img src="<?php echo $img; ?>">
+                                </a>
+
+                            <?php endwhile; ?>  
+                        </div>
+                    <?php endif; ?> 
                 </div>
             </div>
         </div>
