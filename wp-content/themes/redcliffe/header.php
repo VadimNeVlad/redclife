@@ -33,7 +33,10 @@
         </div>
         <div class="header__bottom">
             <div class="container">
-                <a href="<?php echo esc_url( home_url() ); ?>" class="header__logo">REDCLIFFE <span>PARTNERS</span></a>
+                <?php if (get_field('main_logo', 'options')) { ?>
+                    <a href="<?php echo esc_url( home_url() ); ?>" class="header__logo"><img src="<?php the_field('main_logo', 'options') ?>" alt="logo"></a>
+                <?php } ?>
+                
                 <nav class="header__menu">
 
                     <?php wp_nav_menu(array(
